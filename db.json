@@ -1,5 +1,18 @@
 {
-  "users": [{ "id": 1, "name": "Myra" }],
+  "users": [
+    {
+      "id": "1",
+      "name": "Myra"
+    },
+    {
+      "id": "4e21",
+      "name": "Laura Reinger"
+    },
+    {
+      "id": "929d",
+      "name": "Dr. Debbie Rice"
+    }
+  ],
   "albums": [],
   "photos": []
 }
