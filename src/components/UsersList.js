@@ -19,7 +19,7 @@ function UsersList() {
     // BAD !!
       .unwrap()
       .then(() => {
-        console.log('Fetch users success');
+        setIsLoadingUsers(false);
       })
       .catch((error) => setloadingUsersError(error))
       .finally(() => setIsLoadingUsers(false));
