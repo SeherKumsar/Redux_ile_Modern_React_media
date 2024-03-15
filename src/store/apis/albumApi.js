@@ -26,3 +26,5 @@ const albumsApi = createApi({
 });
 // We use a custom hook to use the API
 // albumsApi.useGetAlbumsQuery();
+export const { useFetchAlbumsQuery } = albumsApi;
+export default albumsApi;
