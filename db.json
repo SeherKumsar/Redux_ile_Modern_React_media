@@ -1,10 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Myra"
-    },
-    {
       "id": "8c16",
       "name": "Sylvester Treutel"
     },
@@ -15,13 +11,42 @@
     {
       "id": "31ac",
       "name": "Kristen McLaughlin"
+    },
+    {
+      "id": "732e",
+      "name": "Pam Johns"
     }
   ],
   "albums": [
     {
       "id": "1",
       "name": "Hiking Trip",
-      "userId": "1"
+      "userId": null
+    },
+    {
+      "id": "478a",
+      "userId": null,
+      "title": "Tasty Metal Mouse"
+    },
+    {
+      "id": "7ffb",
+      "userId": "8c16",
+      "title": "Bespoke Frozen Keyboard"
+    },
+    {
+      "id": "87bb",
+      "userId": "8c16",
+      "title": "Generic Plastic Car"
+    },
+    {
+      "id": "3c20",
+      "userId": "979a",
+      "title": "Modern Frozen Sausages"
+    },
+    {
+      "id": "86ae",
+      "userId": "979a",
+      "title": "Licensed Rubber Fish"
     }
   ],
   "photos": []
