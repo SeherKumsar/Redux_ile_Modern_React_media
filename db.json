@@ -13,6 +13,12 @@
       "name": "Nichole Kessler"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": "1",
+      "name": "Hiking Trip",
+      "userId": "1"
+    }
+  ],
   "photos": []
 }

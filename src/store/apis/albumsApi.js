@@ -2,6 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const albumsApi = createApi({
   // We use fetch instead of axios for the API calls
+  reducerPath: 'albums',
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005",
   }),
