@@ -6,6 +6,7 @@ import Button from './Button';
 function AlbumsList({ user }) {
   const { data, error, isLoading } = useFetchAlbumsQuery(user);
   const [addAlbum, results] = useAddAlbumMutation();
+  // console.log(results);
 
   const handleAddAlbum = () => {
     addAlbum(user);
@@ -19,7 +20,6 @@ function AlbumsList({ user }) {
   } else {
     content = data.map((album) => {
       const header = <div>{album.title}</div>;
-
       return (
         <ExpandablePanel key={album.id} header={header}>
           List of photos in the album
