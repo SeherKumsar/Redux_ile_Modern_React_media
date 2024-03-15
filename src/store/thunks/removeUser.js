@@ -11,4 +11,4 @@ const removeUser = createAsyncThunk('users/remove', async (user) => {
   return response.data;
 });
 
-// export { removeUser };
+export { removeUser };
