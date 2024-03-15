@@ -14,7 +14,9 @@ function AlbumsList({ user }) {
 
   let content;
   if (isLoading) {
-    content = <Skeleton times={3} />;
+    // A page with empty data is displayed one second after the loading starts. 
+    // Then comes the data. So we need to classname for skeleton
+    content = <Skeleton className="h-10 w-full" times={3} />;
   } else if (error) {
     content = <div>Error loading albums.</div>;
   } else {
