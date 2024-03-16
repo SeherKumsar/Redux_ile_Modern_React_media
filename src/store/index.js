@@ -25,5 +25,6 @@ export * from './thunks/removeUser';
 // export the hooks for use in components
 export { 
   useFetchAlbumsQuery,
-  useAddAlbumMutation
+  useAddAlbumMutation,
+  useRemoveAlbumMutation,
 } from './apis/albumsApi';
