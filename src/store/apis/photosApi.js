@@ -1,4 +1,7 @@
+// import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+// Gives you a version of createApi that doesn't create custom hooks
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+// Gives you a version of createApi that does create custom hooks
 import { faker } from "@faker-js/faker";
 
 const photosApi = createApi({
