@@ -26,6 +26,10 @@ const albumsApi = createApi({
     return {
       removeAlbum: builder.mutation({
         // removeAlbum(album) in AlbumsListItem.js to track the album
+        invalidatesTags: (result, error, album) => {
+          console.log(album);
+          return [{ type: 'Album', id: album.userId}];
+        },
         query: (album) => {
           return {
             url: `/albums/${album.id}`,
