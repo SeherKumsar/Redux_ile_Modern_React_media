@@ -7,7 +7,7 @@ function AlbumsListItem({ album }) {
     const [removeAlbum, results] = useRemoveAlbumMutation();
 
     const handleRemoveAlbum = () => {
-        removeAlbum({album, user});
+        removeAlbum(album);
     };
 
   const header = (
