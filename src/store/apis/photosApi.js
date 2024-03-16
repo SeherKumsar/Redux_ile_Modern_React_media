@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { faker } from "@faker-js/faker";
 
 const photosApi = createApi({
   reducerPath: "photos",
@@ -7,9 +8,37 @@ const photosApi = createApi({
   }),
   endpoints(builder) {
     return {
-      fetchPhotos: builder.query({}),
-      addPhoto: builder.query({}),
-      removePhoto: builder.query({}),
+      fetchPhotos: builder.query({
+        query: (album) => {
+          return {
+            url: `/photos`,
+            params: {
+              albumId: album.id,
+            },
+            method: "GET",
+          };
+        },
+      }),
+      addPhoto: builder.query({
+        query: (album) => {
+          return {
+            method: "POST",
+            url: `/photos`,
+            body: {
+              albumId: album.albumId,
+              url: faker.image.abstract(150, 150, true),
+            },
+          };
+        },
+      }),
+      removePhoto: builder.query({
+        query: (photo) => {
+          return {
+            method: "DELETE",
+            url: `/photos/${photo.id}`,
+          };
+        },
+      }),
     };
   },
 });
