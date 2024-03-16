@@ -28,7 +28,7 @@ const albumsApi = createApi({
         // removeAlbum(album) in AlbumsListItem.js to track the album
         invalidatesTags: (result, error, album) => {
           console.log(album);
-          return [{ type: 'Album', id: album.userId}];
+          return [{ type: 'Album', id: album.id}];
         },
         query: (album) => {
           return {
@@ -41,7 +41,7 @@ const albumsApi = createApi({
       addAlbum: builder.mutation({
         // addAlbum(user) in AlbumsList.js to track the user
         invalidatesTags: (result, error, user) => {
-          return [{ type: 'Album', id: user.id}];
+          return [{ type: 'UsersAlbums', id: user.id}];
         },
         query: (user) => {
           return {
@@ -58,7 +58,12 @@ const albumsApi = createApi({
 
       fetchAlbums: builder.query({
         providesTags: (result, error, user) => {
-          return [{ type: 'Album', id: user.id}];
+          // return [{ type: 'Album', id: user.id}];
+          const tags = result.map(album => {
+            return { type: 'Album', id: album.id};
+          });
+          tags.push({ type: 'UsersAlbums', id: user.id});
+          return tags;
         },
         query: (user) => {
           return {

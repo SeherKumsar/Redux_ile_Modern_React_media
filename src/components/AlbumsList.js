@@ -5,7 +5,12 @@ import Button from './Button';
 import AlbumsListItem from './AlbumsListItem';
 
 function AlbumsList({ user }) {
-  const { data, error, isLoading } = useFetchAlbumsQuery(user);
+  const { data, error, isFetching } = useFetchAlbumsQuery(user);
+  // isLoading is only set to true the first time you make the request
+  // isLoading sadece ilk isteği yaptığınızda true olarak ayarlanır
+  
+  // isFetching is gonna be set to true every time you make the request
+  // isFetching her isteği yaptığınızda true olarak ayarlanır.
   const [addAlbum, results] = useAddAlbumMutation();
   // console.log(results);
 
@@ -14,7 +19,7 @@ function AlbumsList({ user }) {
   };
 
   let content;
-  if (isLoading) {
+  if (isFetching) {
     // A page with empty data is displayed one second after the loading starts. 
     // Then comes the data. So we need to classname for skeleton
     content = <Skeleton className="h-10 w-full" times={3} />;
