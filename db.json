@@ -64,5 +64,21 @@
       "title": "Incredible Plastic Keyboard"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "1e16",
+      "albumId": "6b13",
+      "url": "https://loremflickr.com/150/150/abstract?lock=25619"
+    },
+    {
+      "id": "bdd0",
+      "albumId": "b923",
+      "url": "https://loremflickr.com/150/150/abstract?lock=88359"
+    },
+    {
+      "id": "d366",
+      "albumId": "6b13",
+      "url": "https://loremflickr.com/150/150/abstract?lock=13248"
+    }
+  ]
 }

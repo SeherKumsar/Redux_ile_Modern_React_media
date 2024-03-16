@@ -14,7 +14,7 @@ const photosApi = createApi({
       fetchPhotos: builder.query({
         query: (album) => {
           return {
-            url: `/photos`,
+            url: "/photos",
             params: {
               albumId: album.id,
             },
@@ -22,19 +22,19 @@ const photosApi = createApi({
           };
         },
       }),
-      addPhoto: builder.query({
+      addPhoto: builder.mutation({
         query: (album) => {
           return {
             method: "POST",
-            url: `/photos`,
+            url: "/photos",
             body: {
-              albumId: album.albumId,
+              albumId: album.id,
               url: faker.image.abstract(150, 150, true),
             },
           };
         },
       }),
-      removePhoto: builder.query({
+      removePhoto: builder.mutation({
         query: (photo) => {
           return {
             method: "DELETE",
