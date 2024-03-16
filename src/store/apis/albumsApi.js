@@ -26,7 +26,7 @@ const albumsApi = createApi({
     return {
       addAlbum: builder.mutation({
         // addAlbum(user) in AlbumsList.js to track the user
-        invalidatesTags: (esult, error, user) => {
+        invalidatesTags: (result, error, user) => {
           return [{ type: 'Album', id: user.id}];
         },
         query: (user) => {
